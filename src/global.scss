@@ -29,9 +29,15 @@ button {
 	cursor: pointer;
 	color: #212121;
 
-	&:hover {
+	&:hover:enabled {
 		color: #F4511E;
 	}
+
+	&:disabled {
+		color: #9E9E9E;
+		cursor: unset;
+	}
+
 }
 
 .userStatus {

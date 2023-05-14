@@ -12,6 +12,7 @@
 	#header {
 		display: flex;
 		align-items: center;
+		padding: 1rem;
 		
 		#header_name {
 			flex: 1;

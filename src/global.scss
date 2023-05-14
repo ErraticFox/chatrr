@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+html,
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	transition: 250ms;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 600;
+
+	&:visited {
+		color: #212121;
+	}
+
+	&:hover {
+		color: #F4511E;
+	}
+}
+
+button {
+	border: none;
+	display: flex;
+	background-color: transparent;
+	transition: 250ms;
+	cursor: pointer;
+	color: #212121;
+
+	&:hover {
+		color: #F4511E;
+	}
+}
+
+.userStatus {
+	$userStatusSize: 15px;
+	width: $userStatusSize;
+	height: $userStatusSize;
+	border-radius: 100%;
+	background-color: #bdbdbd;
+
+	&.online {
+		background-color: #66bb6a;
+	}
+
+	&.away {
+		background-color: #ffee58;
+	}
+}

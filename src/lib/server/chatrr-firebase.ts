@@ -10,8 +10,8 @@ export async function getUserProfile(uid: string): Promise<UserProfile> {
 
 	if (!query.empty) {
 		const profile = query.docs[0].data() as UserProfile
-		profile.created = profile.created.seconds
-		profile.updated = profile.updated.seconds
+		profile.created = profile.created.toDate()
+		profile.updated = profile.updated.toDate()
 		return profile;
 	}
 
@@ -26,11 +26,12 @@ export async function getUserProfile(uid: string): Promise<UserProfile> {
 		bio: ""
 	}
 
-	newProfileDoc.create(profileObj)
-	profileObj.created = profileObj.created.seconds
-	profileObj.updated = profileObj.updated.seconds
-
-	return profileObj
+	await newProfileDoc.create(profileObj)
+	const newProfile = await (await newProfileDoc.get()).data() as UserProfile
+	newProfile.created = newProfile.created.toDate()
+	newProfile.updated = newProfile.updated.toDate()
+	
+	return newProfile
 }
 
 export async function getUserPresenceStatus(uid: string): Promise<UserPresenceStatus> {
@@ -47,9 +48,11 @@ export async function getUserPresenceStatus(uid: string): Promise<UserPresenceSt
 		timestamp: admin.database.ServerValue.TIMESTAMP
 	}
 
-	presenceRef.set(presenceObj)
+	await presenceRef.set(presenceObj)
+	
+	const newPresenceStatus = (await presenceRef.get()).toJSON() as UserPresenceStatus
 
-	return presenceObj;
+	return newPresenceStatus;
 }
 
 export async function getUserChatStatus(uid: string): Promise<UserChatStatus> {
@@ -66,7 +69,9 @@ export async function getUserChatStatus(uid: string): Promise<UserChatStatus> {
 		timestamp: admin.database.ServerValue.TIMESTAMP
 	}
 
-	chatStatusRef.set(chatStatusObj)
+	await chatStatusRef.set(chatStatusObj)
 
-	return chatStatusObj;
+	const newChatStatus = (await chatStatusRef.get()).toJSON() as UserChatStatus
+
+	return newChatStatus;
 }

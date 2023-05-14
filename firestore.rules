@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	match /profiles/{profileId} {
+    		allow read, write, update, delete: if request.auth.uid == resource.data.uid;
+      	allow read: if true;
+    }
+    match /userPresence/{presenceId} {
+    		allow read, write, update, delete: if request.auth.uid == request.resource.data.uid;
+    }
+
+    match /rooms {
+        allow read: if true;
+    }
+
+    match /rooms/{roomId} {
+    		allow read: if true;
+    }
+    
+    match /rooms/{roomId}/messages {
+        allow read: if true;
+    }
+    
+    match /rooms/{roomId}/messages/{messageId} {
+        allow read, write: if request.auth.uid in get(/databases/$(database)/documents/rooms/$(roomId)).data.users
+    }
+  }
+}

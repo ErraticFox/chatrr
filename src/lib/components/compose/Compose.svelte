@@ -37,6 +37,7 @@
 			flex: 1;
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
+			background-color: #eee;
 
 			&:focus {
 				outline: none;

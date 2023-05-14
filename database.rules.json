@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "userPresenceStatus": {
+      "$user_id": {
+        ".write": "$user_id === auth.uid",
+        ".read": true
+      },
+      ".read": true,
+      ".write": false,
+      ".indexOn": "state"
+    },
+		"userChatStatus": {
+      "$user_id": {
+        ".write": "$user_id === auth.uid",
+        ".read": true
+      },
+      ".read": true,
+      ".write": false,
+      ".indexOn": "searching"
+    },
+    ".read": false,
+    ".write": false
+  }
+}

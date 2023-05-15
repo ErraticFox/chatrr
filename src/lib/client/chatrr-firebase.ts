@@ -153,13 +153,11 @@ export async function listenForMessages(roomId: string) {
         queryRef,
         (messagesSnap) => {
             let messages = messagesSnap.docs.map((doc) => doc.data()) as Array<Message>;
-            // stop the double spam
             if (messages[0]?.timestamp) {
                 messages = messages.map((message) => {
                     message.timestamp = message.timestamp?.toMillis();
                     return message;
                 });
-                console.log(messages);
             }
         },
         (error) => {

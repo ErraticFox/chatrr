@@ -2,6 +2,7 @@
     import Search from "svelte-material-icons/Magnify.svelte";
     import Stop from "svelte-material-icons/Close.svelte";
     import Send from "svelte-material-icons/Send.svelte";
+    import Close from "svelte-material-icons/Close.svelte";
     import { roomStore, userChatStatusStore, userProfileStore } from "$lib/client/stores";
     import { page } from "$app/stores";
     import { sendMessage, setUserChatStatus } from "$lib/client/chatrr-firebase";
@@ -10,19 +11,18 @@
 
     let userProfile: UserProfile;
     let userChatStatus: UserChatStatus;
-	let room: Room | null;
+    let room: Room | null;
     $: userProfile = $userProfileStore || $page.data.userProfile;
     $: userChatStatus = $userChatStatusStore || $page.data.userChatStatus;
-	$: room = $roomStore;
-
+    $: room = $roomStore;
 
     let composeInput: HTMLInputElement;
 
     function composeNewMessage(event?: KeyboardEvent) {
         if (!event || event.key === "Enter") {
-			const message = new Message();
+            const message = new Message();
             message.uid = userProfile.uid;
-			message._roomId = room?._id;
+            message._roomId = room?._id;
             message.username = userProfile.username;
             message.message = composeInput.value;
             composeInput.value = "";
@@ -39,6 +39,10 @@
     {:else if userChatStatus?.status === "disconnected"}
         <button class="icon search" on:click={() => setUserChatStatus("searching")}>
             <Search size="20" />
+        </button>
+    {:else if userChatStatus?.status === "connected"}
+        <button class="icon connected" on:click={() => setUserChatStatus("disconnected")}>
+            <Close size="20" />
         </button>
     {:else}
         <button class="icon search" disabled={!userChatStatus}>

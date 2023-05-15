@@ -21,34 +21,32 @@ export const connectDisconnect = functions.database.ref('userChatStatus/{uid}').
             const randomPeer = searchingUsers[keys[Math.floor(keys.length * Math.random())]]
 
             if (randomPeer) {
-                admin.database().ref(`userChatStatus/${randomPeer.uid}`).update({ status: "connected" })
-                admin.database().ref(`userChatStatus/${context.auth.uid}`).update({ status: "connected" })
+                await admin.database().ref(`userChatStatus/${randomPeer.uid}`).update({ status: "connected" })
+                await admin.database().ref(`userChatStatus/${context.auth.uid}`).update({ status: "connected" })
 
                 const roomRef = admin.firestore().collection('rooms').doc()
 
-                roomRef.create({
+                await roomRef.create({
                     _id: roomRef.id,
                     users: [randomPeer.uid, context.auth.uid]
                 })
             }
         }
 
-    }
-    
-    if (prev.connected !== next.connected) {
 
-        if (!next.connected) {
+        if (prev.status === "connected" && next.status === "disconnected") {
             const query = await admin.firestore().collection('rooms').where('users', 'array-contains', prev.uid).get()
             if (query.docs) {
                 const roomRef = query.docs[0].ref
                 const data = (await roomRef.get()).data()
                 const peerId = data.users.filter(id => id !== prev.uid)
-                admin.database().ref(`userChatStatus/${peerId}`).update({ status: "disconnected" })
-                admin.firestore().recursiveDelete(roomRef)
+                await admin.database().ref(`userChatStatus/${peerId}`).update({ status: "disconnected" })
+                await admin.firestore().recursiveDelete(roomRef)
             }
         }
-        
-    }
 
+    }
+    
+        
     return ''
 })

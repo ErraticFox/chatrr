@@ -22,6 +22,7 @@ export type PresenceStatus = "online" | "away" | "offline"
 export interface UserPresenceStatus {
 	status: PresenceStatus
 	timestamp: object
+	uid?: string
 }
 
 export type ChatStatus = "searching" | "connected" | "disconnected"
@@ -29,4 +30,10 @@ export type ChatStatus = "searching" | "connected" | "disconnected"
 export interface UserChatStatus {
 	status: ChatStatus
 	timestamp: object
+	uid?: string
+}
+
+export interface Room {
+	_id: string;
+	users: Array<string>;
 }

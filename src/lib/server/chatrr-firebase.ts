@@ -48,7 +48,7 @@ export async function getUserPresenceStatus(uid: string): Promise<UserPresenceSt
 		timestamp: admin.database.ServerValue.TIMESTAMP
 	}
 
-	await presenceRef.set(presenceObj)
+	await presenceRef.update(presenceObj)
 	
 	const newPresenceStatus = (await presenceRef.get()).toJSON() as UserPresenceStatus
 
@@ -69,7 +69,7 @@ export async function getUserChatStatus(uid: string): Promise<UserChatStatus> {
 		timestamp: admin.database.ServerValue.TIMESTAMP
 	}
 
-	await chatStatusRef.set(chatStatusObj)
+	await chatStatusRef.update(chatStatusObj)
 
 	const newChatStatus = (await chatStatusRef.get()).toJSON() as UserChatStatus
 

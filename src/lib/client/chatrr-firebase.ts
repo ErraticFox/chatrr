@@ -158,6 +158,7 @@ export async function listenForMessages(roomId: string) {
                     message.timestamp = message.timestamp?.toMillis();
                     return message;
                 });
+                messagesStore.set(messages)
             }
         },
         (error) => {

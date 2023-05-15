@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Compose from '$lib/components/compose/Compose.svelte';
 	import Messages from '$lib/components/messages/Messages.svelte';
+	import PeerPreview from "$lib/components/peerPreview/PeerPreview.svelte";
 </script>
 
 <svelte:head>
@@ -10,6 +11,7 @@
 
 <section>
 	<div id="chat">
+		<PeerPreview/>
 		<Messages />
 		<Compose />
 	</div>

@@ -11,4 +11,4 @@ export const userPresenceStatusStore: Writable<UserPresenceStatus | null> = writ
 export const userChatStatusStore: Writable<UserChatStatus | null> = writable();
 
 export const roomStore: Writable<Room | null> = writable();
-export const messagesStore: Writable<Array<Message>> = writable();
+export const messagesStore: Writable<Array<Message>> = writable([]);

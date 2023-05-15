@@ -19,7 +19,7 @@
     let composeInput: HTMLInputElement;
 
     function composeNewMessage(event?: KeyboardEvent) {
-        if (!event || event.key === "Enter") {
+        if (!event || event.key === "Enter" && composeInput.value.length) {
             const message = new Message();
             message.uid = userProfile.uid;
             message._roomId = room?._id;
@@ -82,7 +82,7 @@
         }
 
         .icon {
-            margin: 0 1rem;
+            padding: 1rem;
         }
     }
 </style>

@@ -3,7 +3,7 @@
     import Stop from "svelte-material-icons/Close.svelte";
     import Send from "svelte-material-icons/Send.svelte";
     import Close from "svelte-material-icons/Close.svelte";
-    import { roomStore, userChatStatusStore, userProfileStore } from "$lib/client/stores";
+    import { messagesStore, roomStore, userChatStatusStore, userProfileStore } from "$lib/client/stores";
     import { page } from "$app/stores";
     import { sendMessage, setUserChatStatus } from "$lib/client/chatrr-firebase";
     import { Message } from "$lib/models/Message";
@@ -19,7 +19,7 @@
     let composeInput: HTMLInputElement;
 
     function composeNewMessage(event?: KeyboardEvent) {
-        if (!event || event.key === "Enter" && composeInput.value.length) {
+        if (!event || (event.key === "Enter" && composeInput.value.length)) {
             const message = new Message();
             message.uid = userProfile.uid;
             message._roomId = room?._id;
@@ -29,23 +29,35 @@
             sendMessage(message);
         }
     }
+
+    function resetAndSearch() {
+        messagesStore.set([]);
+        setUserChatStatus("searching");
+    }
+
+    function disconnect() {
+        roomStore.set(null);
+        setUserChatStatus("disconnected");
+    }
 </script>
 
 <div id="compose">
-    {#if userChatStatus?.status === "searching"}
-        <button class="icon searching" on:click={() => setUserChatStatus("disconnected")}>
-            <Stop size="20" />
-        </button>
-    {:else if userChatStatus?.status === "disconnected"}
-        <button class="icon search" on:click={() => setUserChatStatus("searching")}>
-            <Search size="20" />
-        </button>
-    {:else if userChatStatus?.status === "connected"}
-        <button class="icon connected" on:click={() => setUserChatStatus("disconnected")}>
-            <Close size="20" />
-        </button>
+    {#if userProfile}
+        {#if userChatStatus?.status === "searching"}
+            <button class="icon searching" on:click={() => setUserChatStatus("disconnected")}>
+                <Stop size="20" />
+            </button>
+        {:else if userChatStatus?.status === "disconnected"}
+            <button class="icon search" on:click={() => resetAndSearch()}>
+                <Search size="20" />
+            </button>
+        {:else if userChatStatus?.status === "connected"}
+            <button class="icon connected" on:click={() => disconnect()}>
+                <Close size="20" />
+            </button>
+        {/if}
     {:else}
-        <button class="icon search" disabled={!userChatStatus}>
+        <button class="icon search" disabled={true}>
             <Search size="20" />
         </button>
     {/if}

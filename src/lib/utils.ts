@@ -1,4 +1,8 @@
 import { type Config, adjectives, colors, animals, uniqueNamesGenerator } from "unique-names-generator"
+import type { Room } from "./models/types";
+import { get } from "svelte/store";
+import { userProfileStore } from "./client/stores";
+import { page } from "$app/stores";
 
 export function generateRandomUsername(): string {
     const config: Config = {
@@ -29,4 +33,8 @@ export const msToDateString = (ms: number) => {
 
 	const formattedDateTime = `${formattedDate} ${formattedTime}`;
 	return formattedTime;
+}
+
+export function filterUser(uid: string, room: Room) {
+	return room.users.filter(user => user !== uid)[0]
 }

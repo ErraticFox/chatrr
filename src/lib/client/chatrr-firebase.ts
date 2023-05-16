@@ -1,17 +1,20 @@
-import { onDisconnect, onValue, ref, serverTimestamp, update } from "firebase/database";
+import { onDisconnect, onValue, ref, serverTimestamp, update, type Unsubscribe as dbUnsubscribe } from "firebase/database";
 import { db, fs, getDbObject } from "./firebase";
 import { get } from "svelte/store";
 import { page } from "$app/stores";
 import type { ChatStatus, PresenceStatus, Room, UserChatStatus, UserPresenceStatus, UserProfile } from "$lib/models/types";
-import { messagesStore, roomStore, userChatStatusStore, userPresenceStatusStore, userProfileStore } from "./stores";
-import { collection, doc, onSnapshot, orderBy, query, setDoc, where } from "firebase/firestore";
+import { messagesStore, peerPresenceStore, peerProfileStore, roomStore, userChatStatusStore, userPresenceStatusStore, userProfileStore } from "./stores";
+import { collection, doc, onSnapshot, orderBy, query, setDoc, where, type Unsubscribe as fsUnsubscribe, getDoc } from "firebase/firestore";
 import type { Document } from "$lib/models/Document";
 import type { Message } from "$lib/models/Message";
+import { filterUser } from "$lib/utils";
 
 // profile
 
 export function listenToUserProfile() {
-    const uid: string = get(page).data.userSession.uid;
+    const uid: string = get(page).data.userSession?.uid;
+    if (!uid) return;
+
     const profileRef = doc(fs, "profiles", uid);
     onSnapshot(profileRef, (snap) => {
         if (snap.exists()) {
@@ -34,7 +37,9 @@ export function initializeUserPresence() {
 }
 
 export function listenToUserPresenceStatus() {
-    const uid: string = get(page).data.userSession.uid;
+    const uid: string = get(page).data.userSession?.uid;
+    if (!uid) return;
+
     const connectedRef = ref(db, ".info/connected");
     const userPresenceRef = ref(db, `userPresenceStatus/${uid}`);
 
@@ -57,7 +62,7 @@ export function listenToUserPresenceStatus() {
 }
 
 export function setUserPresence(status: PresenceStatus) {
-    const uid: string = get(page).data.userSession.uid;
+    const uid: string = get(page).data.userSession?.uid;
     if (!uid) return;
 
     const userPresence = ref(db, `userPresenceStatus/${uid}`);
@@ -74,7 +79,9 @@ export function setUserPresence(status: PresenceStatus) {
 // chat status
 
 export function listenToUserChatStatus() {
-    const uid: string = get(page).data.userSession.uid;
+    const uid: string = get(page).data.userSession?.uid;
+    if (!uid) return;
+
     const connectedRef = ref(db, ".info/connected");
     const userChatStatusRef = ref(db, `userChatStatus/${uid}`);
 
@@ -91,13 +98,25 @@ export function listenToUserChatStatus() {
     });
 
     onValue(userChatStatusRef, (snap) => {
-        if (snap.exists()) userChatStatusStore.set(snap.val());
-        else userChatStatusStore.set(null);
+        if (snap.exists()) {
+            userChatStatusStore.set(snap.val());
+            if (snap.key === "disconnected") {
+                const peer = get(peerProfileStore)
+                if (peer) {
+                    peerProfileUnsub();
+                    peerProfileStore.set(null);
+                    peerPresenceUnsub()
+                    peerPresenceStore.set(null)
+                }
+            }
+        } else {
+            userChatStatusStore.set(null);
+        }
     });
 }
 
 export function setUserChatStatus(status: ChatStatus) {
-    const uid: string = get(page).data.userSession.uid;
+    const uid: string = get(page).data.userSession?.uid;
     if (!uid) return;
 
     const userPresence = ref(db, `userChatStatus/${uid}`);
@@ -137,6 +156,7 @@ export function listenForRoom(uid: string) {
             let room = roomSnap.docs[0].data() as Room;
             roomStore.set(room);
             listenForMessages(room._id);
+            listenToPeerProfile(filterUser(uid, room));
         } else {
             roomStore.set(null);
         }
@@ -158,11 +178,35 @@ export async function listenForMessages(roomId: string) {
                     message.timestamp = message.timestamp?.toMillis();
                     return message;
                 });
-                messagesStore.set(messages)
+                messagesStore.set(messages);
             }
         },
         (error) => {
             if (error.message !== "Missing or insufficient permissions.") console.error(error);
         }
     );
+}
+
+let peerProfileUnsub: fsUnsubscribe;
+let peerPresenceUnsub: dbUnsubscribe;
+
+export async function listenToPeerProfile(uid: string) {
+    const peerRef = collection(fs, "profiles");
+    const peerQuery = query(peerRef, where("uid", "==", uid));
+
+    peerProfileUnsub = onSnapshot(peerQuery, (peerSnap) => {
+        console.log(peerSnap.docs[0].data());
+        if (peerSnap.docs.length) {
+            const peer = peerSnap.docs[0].data() as UserProfile;
+            peerProfileStore.set(peer);
+        }
+    });
+
+    const peerPresenceRef = ref(db, `userPresenceStatus/${uid}`);
+    peerPresenceUnsub = onValue(peerPresenceRef, (peerPresenceSnap) => {
+        if (peerPresenceSnap.exists()) {
+            const peerPresence = peerPresenceSnap.toJSON() as UserPresenceStatus
+            peerPresenceStore.set(peerPresence)
+        }
+    })
 }

@@ -9,7 +9,7 @@ import { readable } from "svelte/store";
 import { browser } from "$app/environment";
 import type { AnyObject } from "$lib/models/types";
 import { invalidateAll } from "$app/navigation";
-import { loading, userProfileStore } from "./stores";
+import { loading, peerProfileStore, roomStore, userChatStatusStore, userPresenceStatusStore, userProfileStore } from "./stores";
 
 async function setToken(token: string) {
     const options = {

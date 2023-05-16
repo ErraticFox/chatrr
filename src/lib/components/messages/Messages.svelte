@@ -1,23 +1,27 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { messagesStore, userChatStatusStore } from "$lib/client/stores";
+    import { loadingChat, messagesStore, userChatStatusStore } from "$lib/client/stores";
     import { msToDateString } from "$lib/utils";
     import { Circle2 } from "svelte-loading-spinners";
 
     $: userChatStatus = $userChatStatusStore || $page.data.userChatStatus;
+
+    function determineUser(uid: string) {
+        return !uid ? "server" : uid === userChatStatus.uid ? "user" : "peer";
+    }
 </script>
 
 <div id="messages">
-    {#if userChatStatus?.status === "searching"}
+    {#if userChatStatus?.status === "searching" || (userChatStatus?.status === "connected" && !$messagesStore.length)}
         <div class="loading">
             <Circle2 durationMultiplier={0.5} />
         </div>
     {/if}
 
     {#each $messagesStore as message}
-        <div class="message {message.uid === userChatStatus.uid ? 'user' : 'peer'}">
+        <div class="message {determineUser(message?.uid)}">
             <div class="message_head">
-                <div class="username">{message.username}</div>
+                <div class="username">{message.username || "server"}</div>
                 <div class="timestamp">{msToDateString(message.timestamp)}</div>
             </div>
             <div class="message_body">
@@ -45,6 +49,7 @@
 
                 .username {
                     font-weight: 600;
+                    color: #9e9e9e;
                 }
 
                 .timestamp {

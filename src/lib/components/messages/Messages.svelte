@@ -1,13 +1,21 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { loadingChat, messagesStore, userChatStatusStore } from "$lib/client/stores";
+    import { loadingChat, messagesStore, userChatStatusStore, userProfileStore } from "$lib/client/stores";
     import { msToDateString } from "$lib/utils";
     import { Circle2 } from "svelte-loading-spinners";
 
+    $: userProfile = $userProfileStore || $page.data.userProfile;
     $: userChatStatus = $userChatStatusStore || $page.data.userChatStatus;
 
     function determineUser(uid: string) {
         return !uid ? "server" : uid === userChatStatus.uid ? "user" : "peer";
+    }
+
+    function parseServerMessage(message: string) {
+        if (message.includes(userProfile.username)) {
+            return message.replace(`${userProfile.username} has`, 'you have')
+        }
+        return message
     }
 </script>
 
@@ -25,7 +33,7 @@
                 <div class="timestamp">{msToDateString(message.timestamp)}</div>
             </div>
             <div class="message_body">
-                <p class="content">{message.message}</p>
+                <p class="content">{!message.username ? parseServerMessage(message.message) : message.message}</p>
             </div>
         </div>
     {/each}

@@ -43,8 +43,10 @@ export const connectDisconnect = functions.database.ref("userChatStatus/{uid}").
                 const roomRef = query.docs[0].ref;
                 const disconnectMessage = (await roomRef.collection("messages").doc("disconnect").get()).exists;
                 if (!disconnectMessage) {
+                    const uid = context.auth.uid
+                    const username = (await admin.firestore().collection("profiles").where("uid", "==", uid).get()).docs[0].data().username;
                     await roomRef.collection("messages").doc("disconnect").set({
-                        message: "user has disconnected",
+                        message: `${username} has disconnected`,
                         timestamp: admin.firestore.FieldValue.serverTimestamp(),
                     });
                 }

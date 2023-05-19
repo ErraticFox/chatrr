@@ -2,8 +2,6 @@
     import { page } from "$app/stores";
     import { signInWith, signOut } from "$lib/client/firebase";
     import { loading, userProfileStore } from "$lib/client/stores";
-    import Logout from "svelte-material-icons/LogoutVariant.svelte";
-    import Login from "svelte-material-icons/Login.svelte";
     import { setUserChatStatus, setUserPresence } from "$lib/client/chatrr-firebase";
     import DropdownMenu from "../DropdownMenu/DropdownMenu.svelte";
 
@@ -15,7 +13,7 @@
         signOut();
     }
 
-    $: if (userProfile) loading.set(false)
+    $: if ($userProfileStore) loading.set(false)
 </script>
 
 <div id="auth">

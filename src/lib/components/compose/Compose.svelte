@@ -74,6 +74,8 @@
 </div>
 
 <style lang="scss">
+
+
     #compose {
         display: flex;
         align-items: center;
@@ -95,6 +97,13 @@
 
         .icon {
             padding: 1rem;
+        }
+    }
+
+    :global(body.dark) {
+       #compose > input {
+            background-color: #424242;
+            color: #fff;
         }
     }
 </style>

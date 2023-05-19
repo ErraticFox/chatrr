@@ -4,6 +4,7 @@ html,
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	transition: 250ms;
 }
 
 a {
@@ -11,10 +12,10 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	font-weight: 600;
-	color: #212121;
+	color: inherit;
 
 	&:visited {
-		color: #212121;
+		color: inherit;
 	}
 
 	&:hover {
@@ -28,7 +29,7 @@ button {
 	background-color: transparent;
 	transition: 250ms;
 	cursor: pointer;
-	color: #212121;
+	color: inherit;
 	padding: .5rem;
 
 	&:hover:enabled {

@@ -29,6 +29,7 @@ button {
 	transition: 250ms;
 	cursor: pointer;
 	color: #212121;
+	padding: .5rem;
 
 	&:hover:enabled {
 		color: #F4511E;

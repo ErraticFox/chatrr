@@ -23,7 +23,7 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        height: calc(100% - 54px);
+        height: calc(100% - 68px);
         box-sizing: border-box;
         width: 100%;
         max-width: 64rem;

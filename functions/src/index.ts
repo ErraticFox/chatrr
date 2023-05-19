@@ -43,12 +43,15 @@ export const connectDisconnect = functions.database.ref("userChatStatus/{uid}").
                 const roomRef = query.docs[0].ref;
                 const disconnectMessage = (await roomRef.collection("messages").doc("disconnect").get()).exists;
                 if (!disconnectMessage) {
-                    const uid = context.auth.uid
+                    const uid = context.auth.uid;
                     const username = (await admin.firestore().collection("profiles").where("uid", "==", uid).get()).docs[0].data().username;
-                    await roomRef.collection("messages").doc("disconnect").set({
-                        message: `${username} has disconnected`,
-                        timestamp: admin.firestore.FieldValue.serverTimestamp(),
-                    });
+                    await roomRef
+                        .collection("messages")
+                        .doc("disconnect")
+                        .set({
+                            message: `${username} has disconnected`,
+                            timestamp: admin.firestore.FieldValue.serverTimestamp(),
+                        });
                 }
                 const data = (await roomRef.get()).data();
                 const peerId = data.users.filter((id) => id !== prev.uid);
@@ -58,5 +61,21 @@ export const connectDisconnect = functions.database.ref("userChatStatus/{uid}").
         }
     }
 
-    return "";
+    return true;
+});
+
+export const handleOfflineAnon = functions.database.ref("userPresenceStatus/{uid}").onUpdate(async (snap, context) => {
+    const prev = snap.before.val();
+    const next = snap.after.val();
+
+    if (prev.status === "online" && next.status === "offline") {
+        if (context.auth.token["provider_id"] === "anonymous") {
+            await (await admin.firestore().collection("profiles").where("uid", "==", context.auth.uid).get()).docs[0].ref.delete();
+            await admin.database().ref(`userPresenceStatus/${context.auth.uid}`).remove();
+            await admin.database().ref(`userChatStatus/${context.auth.uid}`).remove();
+            await admin.auth().deleteUser(context.auth.uid);
+        }
+    }
+
+    return true;
 });

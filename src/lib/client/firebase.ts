@@ -3,7 +3,7 @@ import type { Firestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getDatabase, type Database } from "firebase/database";
 import { collection, getFirestore, query, where, addDoc, doc, onSnapshot, setDoc, deleteDoc } from "firebase/firestore";
-import { getAuth, signInWithRedirect, signOut as _signOut, GoogleAuthProvider, onIdTokenChanged } from "firebase/auth";
+import { getAuth, signInWithRedirect, signOut as _signOut, GoogleAuthProvider, onIdTokenChanged, signInAnonymously } from "firebase/auth";
 import type { Document } from "$lib/models/Document";
 import { readable } from "svelte/store";
 import { browser } from "$app/environment";
@@ -35,7 +35,6 @@ function listenForAuthChanges() {
             } else {
                 await setToken("");
             }
-            loading.set(false);
             await invalidateAll();
         },
         (err) => console.error(err.message)
@@ -54,6 +53,7 @@ export function initializeFirebase(options: FirebaseOptions) {
         fs = getFirestore(app);
         db = getDatabase(app);
         listenForAuthChanges();
+        loading.set(false);
     }
 }
 
@@ -124,8 +124,14 @@ function providerFor(name: string) {
 
 export async function signInWith(name: string) {
     const auth = getAuth(app);
-    const provider = providerFor(name);
-    await signInWithRedirect(auth, provider);
+    if (name === 'anonymous') {
+        await signInAnonymously(auth);
+        loading.set(true)
+        return
+    } else {
+        const provider = providerFor(name);
+        await signInWithRedirect(auth, provider);
+    }
 }
 
 export async function signOut() {

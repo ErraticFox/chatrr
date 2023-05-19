@@ -60,7 +60,6 @@
             white-space: nowrap;
 
             &:hover {
-                background-color: #eeeeee;
                 cursor: pointer;
             }
         }

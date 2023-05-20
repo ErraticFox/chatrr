@@ -1,18 +1,33 @@
 <script>
-    let darkMode = false;
     import Light from "svelte-material-icons/WhiteBalanceSunny.svelte";
     import Dark from "svelte-material-icons/WeatherNight.svelte";
-    import { slide } from "svelte/transition";
+    import { browser } from "$app/environment";
+    
+    let theme;
+
+    if (browser) {
+        theme = localStorage.getItem("theme")
+    }
+
     function toggle() {
-        darkMode = !darkMode;
-        window.document.body.classList.toggle("dark");
+        if (localStorage.getItem("theme") === "light") {
+            window.document.documentElement.classList.remove("light");
+            window.document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+            theme = localStorage.getItem("theme")
+        } else {
+            window.document.documentElement.classList.remove("dark");
+            window.document.documentElement.classList.add("light");
+            localStorage.setItem("theme", "light");
+            theme = localStorage.getItem("theme")
+        }
     }
 </script>
 
 <button on:click={toggle}>
-    {#if darkMode}
+    {#if theme === "light"}
         <Light size="20" />
-    {:else}
+    {:else if theme === "dark"}
         <Dark size="20" />
     {/if}
 </button>
@@ -23,12 +38,12 @@
         --text-color: #212121;
     }
 
-    :global(body) {
+    :global(html) {
         background: var(--bg-color);
         color: var(--text-color);
     }
 
-    :global(body.dark) {
+    :global(html.dark) {
         --bg-color: #212121;
         --text-color: #fafafa;
     }

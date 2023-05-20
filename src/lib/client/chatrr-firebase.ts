@@ -3,7 +3,16 @@ import { db, fs, getDbObject } from "./firebase";
 import { get } from "svelte/store";
 import { page } from "$app/stores";
 import type { ChatStatus, PresenceStatus, Room, UserChatStatus, UserPresenceStatus, UserProfile } from "$lib/models/types";
-import { messagesStore, peerPresenceStore, peerProfileStore, roomStore, userChatStatusStore, userPresenceStatusStore, userProfileStore } from "./stores";
+import {
+    loading,
+    messagesStore,
+    peerPresenceStore,
+    peerProfileStore,
+    roomStore,
+    userChatStatusStore,
+    userPresenceStatusStore,
+    userProfileStore,
+} from "./stores";
 import { collection, doc, onSnapshot, orderBy, query, setDoc, where, type Unsubscribe as fsUnsubscribe, getDoc } from "firebase/firestore";
 import type { Document } from "$lib/models/Document";
 import type { Message } from "$lib/models/Message";
@@ -20,6 +29,7 @@ export function listenToUserProfile() {
         if (snap.exists()) {
             const profile = snap.data() as UserProfile;
             userProfileStore.set(profile);
+            loading.set(false);
         } else {
             userProfileStore.set(null);
         }
@@ -101,12 +111,12 @@ export function listenToUserChatStatus() {
         if (snap.exists()) {
             userChatStatusStore.set(snap.val());
             if (snap.key === "disconnected") {
-                const peer = get(peerProfileStore)
+                const peer = get(peerProfileStore);
                 if (peer) {
                     peerProfileUnsub();
                     peerProfileStore.set(null);
-                    peerPresenceUnsub()
-                    peerPresenceStore.set(null)
+                    peerPresenceUnsub();
+                    peerPresenceStore.set(null);
                 }
             }
         } else {
@@ -205,8 +215,8 @@ export async function listenToPeerProfile(uid: string) {
     const peerPresenceRef = ref(db, `userPresenceStatus/${uid}`);
     peerPresenceUnsub = onValue(peerPresenceRef, (peerPresenceSnap) => {
         if (peerPresenceSnap.exists()) {
-            const peerPresence = peerPresenceSnap.toJSON() as UserPresenceStatus
-            peerPresenceStore.set(peerPresence)
+            const peerPresence = peerPresenceSnap.toJSON() as UserPresenceStatus;
+            peerPresenceStore.set(peerPresence);
         }
-    })
+    });
 }

@@ -53,7 +53,6 @@ export function initializeFirebase(options: FirebaseOptions) {
         fs = getFirestore(app);
         db = getDatabase(app);
         listenForAuthChanges();
-        loading.set(false);
     }
 }
 

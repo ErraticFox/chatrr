@@ -6,7 +6,12 @@
     let theme;
 
     if (browser) {
-        theme = localStorage.getItem("theme")
+        if (localStorage.getItem("theme")) {
+            theme = localStorage.getItem("theme")
+        } else {
+            localStorage.setItem("theme", "light");
+            localStorage.getItem("theme")
+        }
     }
 
     function toggle() {

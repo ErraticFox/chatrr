@@ -35,6 +35,7 @@ function listenForAuthChanges() {
             } else {
                 await setToken("");
             }
+            loading.set(false);
             await invalidateAll();
         },
         (err) => console.error(err.message)

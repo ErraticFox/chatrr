@@ -13,7 +13,7 @@ import {
     userPresenceStatusStore,
     userProfileStore,
 } from "./stores";
-import { collection, doc, onSnapshot, orderBy, query, setDoc, where, type Unsubscribe as fsUnsubscribe, getDoc } from "firebase/firestore";
+import { collection, doc, onSnapshot, orderBy, query, setDoc, where, type Unsubscribe as fsUnsubscribe } from "firebase/firestore";
 import type { Document } from "$lib/models/Document";
 import type { Message } from "$lib/models/Message";
 import { filterUser } from "$lib/utils";
@@ -29,7 +29,6 @@ export function listenToUserProfile() {
         if (snap.exists()) {
             const profile = snap.data() as UserProfile;
             userProfileStore.set(profile);
-            loading.set(false);
         } else {
             userProfileStore.set(null);
         }

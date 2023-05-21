@@ -3,7 +3,7 @@
     import { initializeFirebase } from "$lib/client/firebase";
     import { PUBLIC_FIREBASE_CLIENT_CONFIG } from "$env/static/public";
     import "../global.scss";
-    import { initializeUserPresence, listenForRoom, listenToUserChatStatus } from "$lib/client/chatrr-firebase";
+    import { initializeUserPresence, listenForRoom, listenToUserChatStatus, listenToUserProfile } from "$lib/client/chatrr-firebase";
     import { navigating, page } from "$app/stores";
     import { initializedListeners, loading } from "$lib/client/stores";
     import Header from "./Header.svelte";

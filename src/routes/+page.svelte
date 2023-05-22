@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { roomStore } from "$lib/client/stores";
     import Compose from "$lib/components/compose/Compose.svelte";
     import Messages from "$lib/components/messages/Messages.svelte";
     import PeerPreview from "$lib/components/peerPreview/PeerPreview.svelte";

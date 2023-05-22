@@ -196,6 +196,8 @@ export async function listenForMessages(roomId: string) {
     );
 }
 
+// peer
+
 let peerProfileUnsub: fsUnsubscribe;
 let peerPresenceUnsub: dbUnsubscribe;
 
@@ -204,7 +206,6 @@ export async function listenToPeerProfile(uid: string) {
     const peerQuery = query(peerRef, where("uid", "==", uid));
 
     peerProfileUnsub = onSnapshot(peerQuery, (peerSnap) => {
-        console.log(peerSnap.docs[0].data());
         if (peerSnap.docs.length) {
             const peer = peerSnap.docs[0].data() as UserProfile;
             peerProfileStore.set(peer);

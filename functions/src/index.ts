@@ -65,10 +65,10 @@ export const connectDisconnect = functions.database.ref("userChatStatus/{uid}").
 });
 
 export const handleOfflineAnon = functions.database.ref("userPresenceStatus/{uid}").onUpdate(async (snap, context) => {
-    const prev = snap.before.val();
     const next = snap.after.val();
 
-    if (prev.status === "online" && next.status === "offline") {
+    if (next.status === "offline") {
+        console.log(context.auth.token["provider_id"])
         if (context.auth.token["provider_id"] === "anonymous") {
             await (await admin.firestore().collection("profiles").where("uid", "==", context.auth.uid).get()).docs[0].ref.delete();
             await admin.database().ref(`userPresenceStatus/${context.auth.uid}`).remove();

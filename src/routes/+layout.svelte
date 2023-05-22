@@ -23,6 +23,7 @@
             initializeUserPresence();
             listenToUserChatStatus();
             listenForRoom($page.data.userSession.uid);
+            loading.set(false);
         } else {
             loading.set(false);
         }

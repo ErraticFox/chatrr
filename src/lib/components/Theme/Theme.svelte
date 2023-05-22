@@ -10,7 +10,7 @@
             theme = localStorage.getItem("theme")
         } else {
             localStorage.setItem("theme", "light");
-            localStorage.getItem("theme")
+            theme = localStorage.getItem("theme")
         }
     }
 

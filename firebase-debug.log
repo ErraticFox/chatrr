@@ -1,0 +1,727 @@
+[debug] [2023-05-23T22:16:14.329Z] ----------------------------------------------------------------------
+[debug] [2023-05-23T22:16:14.331Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chase\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-05-23T22:16:14.332Z] CLI Version:   12.0.0
+[debug] [2023-05-23T22:16:14.332Z] Platform:      win32
+[debug] [2023-05-23T22:16:14.332Z] Node Version:  v18.16.0
+[debug] [2023-05-23T22:16:14.333Z] Time:          Tue May 23 2023 18:16:14 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-23T22:16:14.333Z] Env Overrides: FIRESTORE_EMULATOR_HOST
+[debug] [2023-05-23T22:16:14.333Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-23T22:16:14.437Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-23T22:16:14.437Z] > authorizing via signed-in user (erraticfox@gmail.com)
+[debug] [2023-05-23T22:16:14.543Z] java version "20.0.1" 2023-04-18
+
+[debug] [2023-05-23T22:16:14.544Z] Java(TM) SE Runtime Environment (build 20.0.1+9-29)
+Java HotSpot(TM) 64-Bit Server VM (build 20.0.1+9-29, mixed mode, sharing)
+
+[debug] [2023-05-23T22:16:14.563Z] Parsed Java major version: 20
+[info] i  emulators: Starting emulators: auth, functions, firestore, database {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database"}}
+[debug] [2023-05-23T22:16:14.576Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T22:16:14.576Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T22:16:14.576Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T22:16:14.576Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T22:16:14.576Z] assigned listening specs for emulators {"user":{"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-05-23T22:16:14.590Z] [hub] writing locator at C:\Users\chase\AppData\Local\Temp\hub-chatrr-9e8fa.json
+[debug] [2023-05-23T22:16:14.600Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T22:16:14.600Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T22:16:14.600Z] late-assigned ports for functions and eventarc emulators {"user":{"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mhosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-05-23T22:16:14.606Z] defaultcredentials: writing to file C:\Users\chase\AppData\Roaming\firebase\erraticfox_gmail_com_application_default_credentials.json
+[debug] [2023-05-23T22:16:14.607Z] Setting GAC to C:\Users\chase\AppData\Roaming\firebase\erraticfox_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\chase\\AppData\\Roaming\\firebase\\erraticfox_gmail_com_application_default_credentials.json"}}
+[debug] [2023-05-23T22:16:14.609Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatrr-9e8fa/adminSdkConfig [none]
+[debug] [2023-05-23T22:16:14.869Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatrr-9e8fa/adminSdkConfig 200
+[debug] [2023-05-23T22:16:14.870Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatrr-9e8fa/adminSdkConfig {"projectId":"chatrr-9e8fa","databaseURL":"https://chatrr-9e8fa-default-rtdb.firebaseio.com","storageBucket":"chatrr-9e8fa.appspot.com","locationId":"us-central"}
+[debug] [2023-05-23T22:16:14.897Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-23T22:16:14.897Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2023-05-23T22:16:14.897Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\chase\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.17.4.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","chatrr-9e8fa","--rules","C:\\Users\\chase\\Desktop\\chat\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\chase\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.17.4.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"chatrr-9e8fa\",\"--rules\",\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2023-05-23T22:16:16.481Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatrr-9e8fa [none]
+[debug] [2023-05-23T22:16:16.661Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatrr-9e8fa 200
+[debug] [2023-05-23T22:16:16.661Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatrr-9e8fa {"projectId":"chatrr-9e8fa","projectNumber":"615140582144","displayName":"chatrr","name":"projects/chatrr-9e8fa","resources":{"hostingSite":"chatrr-9e8fa","realtimeDatabaseInstance":"chatrr-9e8fa-default-rtdb","storageBucket":"chatrr-9e8fa.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_f7235d2c-c854-42c8-aa51-db8b91d48754"}
+[debug] [2023-05-23T22:16:16.661Z] database rules config:  [{"instance":"chatrr-9e8fa-default-rtdb","rules":"C:\\Users\\chase\\Desktop\\chat\\database.rules.json"}]
+[debug] [2023-05-23T22:16:16.665Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2023-05-23T22:16:16.665Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-23T22:16:16.665Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2023-05-23T22:16:16.665Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\chase\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.0.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\chase\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.0.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2023-05-23T22:16:24.066Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-05-23T22:16:24.067Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-05-23T22:16:24.067Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\chase\\.cache\\firebase\\emulators\\ui-v1.11.6\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\chase\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.6\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-05-23T22:16:24.174Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-05-23T22:16:24.175Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\chase\Desktop\chat\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\chase\\Desktop\\chat\\functions\" for Cloud Functions..."}}
+[debug] [2023-05-23T22:16:24.334Z] Validating nodejs source
+[debug] [2023-05-23T22:16:25.681Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T22:16:25.682Z] Building nodejs source
+[debug] [2023-05-23T22:16:25.682Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-23T22:16:25.684Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T22:16:25.692Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T22:16:25.881Z] Serving at port 8293
+
+[debug] [2023-05-23T22:16:26.129Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T22:16:26.135Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-23T22:16:26.148Z] addRealtimeDatabaseTrigger[chatrr-9e8fa-default-rtdb] "{\"name\":\"projects/chatrr-9e8fa/locations/_/functions/us-central1-connectDisconnect-0\",\"path\":\"/userChatStatus/{uid}\",\"event\":\"providers/google.firebase.database/eventTypes/ref.update\",\"topic\":\"projects/chatrr-9e8fa/topics/us-central1-connectDisconnect-0\"}"
+[debug] [2023-05-23T22:16:26.148Z] >>> [apiv2][query] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb [none]
+[debug] [2023-05-23T22:16:26.148Z] >>> [apiv2][body] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb "{\"name\":\"projects/chatrr-9e8fa/locations/_/functions/us-central1-connectDisconnect-0\",\"path\":\"/userChatStatus/{uid}\",\"event\":\"providers/google.firebase.database/eventTypes/ref.update\",\"topic\":\"projects/chatrr-9e8fa/topics/us-central1-connectDisconnect-0\"}"
+[debug] [2023-05-23T22:16:26.476Z] <<< [apiv2][status] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb 200
+[debug] [2023-05-23T22:16:26.476Z] <<< [apiv2][body] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb {"status":"ok"}
+[info] +  functions[us-central1-connectDisconnect]: database function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mdatabase\u001b[22m function initialized."}}
+[debug] [2023-05-23T22:16:26.477Z] addRealtimeDatabaseTrigger[chatrr-9e8fa-default-rtdb] "{\"name\":\"projects/chatrr-9e8fa/locations/_/functions/us-central1-handleOfflineAnon-0\",\"path\":\"/userPresenceStatus/{uid}\",\"event\":\"providers/google.firebase.database/eventTypes/ref.update\",\"topic\":\"projects/chatrr-9e8fa/topics/us-central1-handleOfflineAnon-0\"}"
+[debug] [2023-05-23T22:16:26.477Z] >>> [apiv2][query] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb [none]
+[debug] [2023-05-23T22:16:26.477Z] >>> [apiv2][body] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb "{\"name\":\"projects/chatrr-9e8fa/locations/_/functions/us-central1-handleOfflineAnon-0\",\"path\":\"/userPresenceStatus/{uid}\",\"event\":\"providers/google.firebase.database/eventTypes/ref.update\",\"topic\":\"projects/chatrr-9e8fa/topics/us-central1-handleOfflineAnon-0\"}"
+[debug] [2023-05-23T22:16:26.482Z] <<< [apiv2][status] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb 200
+[debug] [2023-05-23T22:16:26.483Z] <<< [apiv2][body] POST http://127.0.0.1:9000/.settings/functionTriggers.json?ns=chatrr-9e8fa-default-rtdb {"status":"ok"}
+[info] +  functions[us-central1-handleOfflineAnon]: database function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mdatabase\u001b[22m function initialized."}}
+[debug] [2023-05-23T22:16:26.484Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=chatrr-9e8fa-default-rtdb
+[debug] [2023-05-23T22:16:26.484Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  \"rules\": {\n    \"userPresenceStatus\": {\n      \"$user_id\": {\n        \".write\": \"$user_id === auth.uid\",\n        \".read\": true\n      },\n      \".read\": true,\n      \".write\": false,\n      \".indexOn\": \"state\"\n    },\n\t\t\"userChatStatus\": {\n      \"$user_id\": {\n        \".write\": \"$user_id === auth.uid\",\n        \".read\": true\n      },\n      \".read\": true,\n      \".write\": false,\n      \".indexOn\": \"searching\"\n    },\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-05-23T22:16:26.529Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2023-05-23T22:16:26.529Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database  │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-05-23T22:16:54.891Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:16:54.891Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"439522b5-0e69-4de9-9461-19dd426410d8","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:16:54.890Z","data":{"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","metadata":{"creationTime":"2023-05-23T22:16:54.889Z","lastSignInTime":"2023-05-23T22:16:54.889Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:16:54.896Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:16:54.896Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:16:58.106Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:16:58.106Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:16:58.107Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:16:58.106Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:16:58.107Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:16:58.111Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:16:58.112Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:16:58.123Z] [worker-pool] addWorker(us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handleOfflineAnon)"}}
+[debug] [2023-05-23T22:16:58.124Z] [worker-pool] Adding worker with key us-central1-handleOfflineAnon, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handleOfflineAnon, total=1"}}
+[debug] [2023-05-23T22:16:59.278Z] [runtime-status] [22112] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-23T22:16:59.279Z] [runtime-status] [22112] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:16:59.280Z] [runtime-status] [22112] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-05-23T22:16:59.281Z] [runtime-status] [22112] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:16:59.546Z] [runtime-status] [22112] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-05-23T22:16:59.547Z] [runtime-status] [22112] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-05-23T22:16:59.549Z] [runtime-status] [22112] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:16:59.552Z] [runtime-status] [22112] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-23T22:16:59.559Z] [runtime-status] [22112] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:16:59.559Z] [runtime-status] [22112] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[warn] !  It looks like you're trying to access functions.config().firebase but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"It looks like you're trying to access functions.config().firebase but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator"}}
+[debug] [2023-05-23T22:16:59.563Z] [runtime-status] [22112] initializeApp(DEFAULT) {"storageBucket":"chatrr-9e8fa.appspot.com","databaseURL":"http://127.0.0.1:9000/?ns=chatrr-9e8fa-default-rtdb","projectId":"chatrr-9e8fa"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] initializeApp(DEFAULT) {\"storageBucket\":\"chatrr-9e8fa.appspot.com\",\"databaseURL\":\"http://127.0.0.1:9000/?ns=chatrr-9e8fa-default-rtdb\",\"projectId\":\"chatrr-9e8fa\"}"}}
+[debug] [2023-05-23T22:16:59.581Z] [runtime-status] [22112] Functions runtime initialized. {"cwd":"C:\\Users\\chase\\Desktop\\chat\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-05-23T22:16:59.582Z] [runtime-status] [22112] Listening to port: \\?\pipe\fire_emu_6c690e69b8951d8b {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] Listening to port: \\\\?\\pipe\\fire_emu_6c690e69b8951d8b"}}
+[debug] [2023-05-23T22:16:59.673Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE"}}
+[debug] [2023-05-23T22:16:59.673Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:16:59.674Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: BUSY"}}
+[debug] [2023-05-23T22:16:59.698Z] [runtime-status] [22112] RunBackground {"data":{"data":{"status":"online","timestamp":1684880217782,"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"},"delta":{"status":"away","timestamp":1684880218031}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","token":{"provider_id":"anonymous","exp":1684883814,"user_id":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","iat":1684880214,"sub":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","aud":"chatrr-9e8fa","auth_time":1684880214,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/GVJ57SC29QbmN3G1mHJtrl8FfWYK","timestamp":"2023-05-23T22:16:58.031Z","eventId":"EVp521fQYXUkWMBw8wfwEdRd1oY="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] RunBackground {\"data\":{\"data\":{\"status\":\"online\",\"timestamp\":1684880217782,\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"},\"delta\":{\"status\":\"away\",\"timestamp\":1684880218031}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684883814,\"user_id\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"iat\":1684880214,\"sub\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684880214,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"timestamp\":\"2023-05-23T22:16:58.031Z\",\"eventId\":\"EVp521fQYXUkWMBw8wfwEdRd1oY=\"}}"}}
+[debug] [2023-05-23T22:16:59.702Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 29.1629ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 29.1629ms"}}
+[debug] [2023-05-23T22:16:59.705Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE"}}
+[debug] [2023-05-23T22:16:59.706Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:16:59.706Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:16:59.706Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:17:07.107Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:17:07.106Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:17:07.107Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:17:07.106Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:17:07.107Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:17:07.114Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:17:07.115Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:17:07.115Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:17:07.116Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: BUSY"}}
+[debug] [2023-05-23T22:17:07.119Z] [runtime-status] [22112] RunBackground {"data":{"data":{"status":"away","timestamp":1684880218031,"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"},"delta":{"status":"online","timestamp":1684880227084}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","token":{"provider_id":"anonymous","exp":1684883814,"user_id":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","iat":1684880214,"sub":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","aud":"chatrr-9e8fa","auth_time":1684880214,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/GVJ57SC29QbmN3G1mHJtrl8FfWYK","timestamp":"2023-05-23T22:17:07.084Z","eventId":"jYB8R3ajmMZ1LU6Ly1o+RZ8y7aw="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] RunBackground {\"data\":{\"data\":{\"status\":\"away\",\"timestamp\":1684880218031,\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"},\"delta\":{\"status\":\"online\",\"timestamp\":1684880227084}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684883814,\"user_id\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"iat\":1684880214,\"sub\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684880214,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"timestamp\":\"2023-05-23T22:17:07.084Z\",\"eventId\":\"jYB8R3ajmMZ1LU6Ly1o+RZ8y7aw=\"}}"}}
+[debug] [2023-05-23T22:17:07.121Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 6.1751ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 6.1751ms"}}
+[debug] [2023-05-23T22:17:07.123Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE"}}
+[debug] [2023-05-23T22:17:07.123Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:17:07.123Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:17:07.123Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:17:09.392Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:17:09.392Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:17:09.392Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:17:09.392Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:17:09.393Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:17:09.396Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:17:09.396Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:17:09.396Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:17:09.397Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: BUSY"}}
+[debug] [2023-05-23T22:17:09.399Z] [runtime-status] [22112] RunBackground {"data":{"data":{"status":"online","timestamp":1684880227084,"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"},"delta":{"status":"offline","timestamp":1684880229382}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","token":{"provider_id":"anonymous","exp":1684883814,"user_id":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","iat":1684880214,"sub":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","aud":"chatrr-9e8fa","auth_time":1684880214,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/GVJ57SC29QbmN3G1mHJtrl8FfWYK","timestamp":"2023-05-23T22:17:09.382Z","eventId":"qxHmW4p7iWxIfN+1qnaCoficODM="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [22112] RunBackground {\"data\":{\"data\":{\"status\":\"online\",\"timestamp\":1684880227084,\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"},\"delta\":{\"status\":\"offline\",\"timestamp\":1684880229382}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684883814,\"user_id\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"iat\":1684880214,\"sub\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684880214,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"GVJ57SC29QbmN3G1mHJtrl8FfWYK\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/GVJ57SC29QbmN3G1mHJtrl8FfWYK\",\"timestamp\":\"2023-05-23T22:17:09.382Z\",\"eventId\":\"qxHmW4p7iWxIfN+1qnaCoficODM=\"}}"}}
+[debug] [2023-05-23T22:17:09.400Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 3.8171ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 3.8171ms"}}
+[debug] [2023-05-23T22:17:09.401Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: IDLE"}}
+[debug] [2023-05-23T22:17:09.401Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:17:09.401Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:17:09.402Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:27:43.243Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-23T22:27:44.260Z] Validating nodejs source
+[debug] [2023-05-23T22:27:45.737Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T22:27:45.738Z] Building nodejs source
+[debug] [2023-05-23T22:27:45.738Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-23T22:27:45.739Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T22:27:45.749Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T22:27:45.938Z] Serving at port 8092
+
+[debug] [2023-05-23T22:27:46.184Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T22:27:46.188Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-23T22:27:46.199Z] [worker-pool] Shutting down IDLE worker (us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-handleOfflineAnon)"}}
+[debug] [2023-05-23T22:27:46.199Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: FINISHING"}}
+[debug] [2023-05-23T22:27:46.206Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: exited"}}
+[debug] [2023-05-23T22:27:46.206Z] [worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-26df2361-fc07-4f34-a229-f8ae7f26c12f]: FINISHED"}}
+[debug] [2023-05-23T22:29:12.276Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:29:12.276Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"db682911-c6cc-4398-9f28-e24e6bc886aa","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:29:12.276Z","data":{"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","metadata":{"creationTime":"2023-05-23T22:29:12.275Z","lastSignInTime":"2023-05-23T22:29:12.275Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:29:12.281Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:29:12.281Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:29:15.763Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:29:15.763Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:29:15.764Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:29:15.763Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:29:15.764Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:29:15.770Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:29:15.770Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:29:15.771Z] [worker-pool] Cleaned up workers for us-central1-handleOfflineAnon: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-handleOfflineAnon: 1 --> 0"}}
+[debug] [2023-05-23T22:29:15.781Z] [worker-pool] addWorker(us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handleOfflineAnon)"}}
+[debug] [2023-05-23T22:29:15.781Z] [worker-pool] Adding worker with key us-central1-handleOfflineAnon, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handleOfflineAnon, total=1"}}
+[debug] [2023-05-23T22:29:16.936Z] [runtime-status] [1196] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-23T22:29:16.937Z] [runtime-status] [1196] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:29:16.938Z] [runtime-status] [1196] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-05-23T22:29:16.938Z] [runtime-status] [1196] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:29:17.158Z] [runtime-status] [1196] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-05-23T22:29:17.158Z] [runtime-status] [1196] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-05-23T22:29:17.158Z] [runtime-status] [1196] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:29:17.159Z] [runtime-status] [1196] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-23T22:29:17.161Z] [runtime-status] [1196] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:29:17.161Z] [runtime-status] [1196] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-05-23T22:29:17.164Z] [runtime-status] [1196] initializeApp(DEFAULT) {"storageBucket":"chatrr-9e8fa.appspot.com","databaseURL":"http://127.0.0.1:9000/?ns=chatrr-9e8fa-default-rtdb","projectId":"chatrr-9e8fa"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] initializeApp(DEFAULT) {\"storageBucket\":\"chatrr-9e8fa.appspot.com\",\"databaseURL\":\"http://127.0.0.1:9000/?ns=chatrr-9e8fa-default-rtdb\",\"projectId\":\"chatrr-9e8fa\"}"}}
+[debug] [2023-05-23T22:29:17.175Z] [runtime-status] [1196] Functions runtime initialized. {"cwd":"C:\\Users\\chase\\Desktop\\chat\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-05-23T22:29:17.175Z] [runtime-status] [1196] Listening to port: \\?\pipe\fire_emu_ac8575ba722e0c3f {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] Listening to port: \\\\?\\pipe\\fire_emu_ac8575ba722e0c3f"}}
+[debug] [2023-05-23T22:29:17.202Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: IDLE"}}
+[debug] [2023-05-23T22:29:17.202Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:29:17.203Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: BUSY"}}
+[debug] [2023-05-23T22:29:17.224Z] [runtime-status] [1196] RunBackground {"data":{"data":{"status":"away","timestamp":1684880953418,"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc"},"delta":{"status":"online","timestamp":1684880955749}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","token":{"provider_id":"anonymous","exp":1684884552,"user_id":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","iat":1684880952,"sub":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","aud":"chatrr-9e8fa","auth_time":1684880952,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/gqG01K7PUQvF6hQh2qbT5m1XzyKc","timestamp":"2023-05-23T22:29:15.749Z","eventId":"kP/gG9H2+v0V0iqX6nWhAxVlR2A="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] RunBackground {\"data\":{\"data\":{\"status\":\"away\",\"timestamp\":1684880953418,\"uid\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\"},\"delta\":{\"status\":\"online\",\"timestamp\":1684880955749}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684884552,\"user_id\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"iat\":1684880952,\"sub\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684880952,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"timestamp\":\"2023-05-23T22:29:15.749Z\",\"eventId\":\"kP/gG9H2+v0V0iqX6nWhAxVlR2A=\"}}"}}
+[debug] [2023-05-23T22:29:17.231Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 28.3741ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 28.3741ms"}}
+[debug] [2023-05-23T22:29:17.232Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: IDLE"}}
+[debug] [2023-05-23T22:29:17.233Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:29:17.233Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:29:17.233Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:29:18.088Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:29:18.088Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:29:18.089Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:29:18.088Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:29:18.089Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:29:18.094Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:29:18.094Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:29:18.094Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:29:18.095Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: BUSY"}}
+[debug] [2023-05-23T22:29:18.097Z] [runtime-status] [1196] RunBackground {"data":{"data":{"status":"online","timestamp":1684880955749,"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc"},"delta":{"status":"offline","timestamp":1684880958077}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","token":{"provider_id":"anonymous","exp":1684884552,"user_id":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","iat":1684880952,"sub":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","aud":"chatrr-9e8fa","auth_time":1684880952,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/gqG01K7PUQvF6hQh2qbT5m1XzyKc","timestamp":"2023-05-23T22:29:18.077Z","eventId":"uH/6aF28FcYYt+AoXwOHR6s9XMo="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [1196] RunBackground {\"data\":{\"data\":{\"status\":\"online\",\"timestamp\":1684880955749,\"uid\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\"},\"delta\":{\"status\":\"offline\",\"timestamp\":1684880958077}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684884552,\"user_id\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"iat\":1684880952,\"sub\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684880952,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"gqG01K7PUQvF6hQh2qbT5m1XzyKc\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/gqG01K7PUQvF6hQh2qbT5m1XzyKc\",\"timestamp\":\"2023-05-23T22:29:18.077Z\",\"eventId\":\"uH/6aF28FcYYt+AoXwOHR6s9XMo=\"}}"}}
+[debug] [2023-05-23T22:29:18.099Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 3.7466ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 3.7466ms"}}
+[debug] [2023-05-23T22:29:18.099Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: IDLE"}}
+[debug] [2023-05-23T22:29:18.099Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:29:18.099Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:29:18.100Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:30:07.746Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-23T22:30:08.761Z] Validating nodejs source
+[debug] [2023-05-23T22:30:10.192Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T22:30:10.192Z] Building nodejs source
+[debug] [2023-05-23T22:30:10.192Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-23T22:30:10.196Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T22:30:10.206Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T22:30:10.417Z] Serving at port 8453
+
+[debug] [2023-05-23T22:30:10.669Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T22:30:10.673Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-23T22:30:10.685Z] [worker-pool] Shutting down IDLE worker (us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-handleOfflineAnon)"}}
+[debug] [2023-05-23T22:30:10.685Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: FINISHING"}}
+[debug] [2023-05-23T22:30:10.694Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: exited"}}
+[debug] [2023-05-23T22:30:10.694Z] [worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-73e994cb-b2f9-4221-a573-ee3845a6789d]: FINISHED"}}
+[debug] [2023-05-23T22:30:13.474Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-23T22:30:14.479Z] Validating nodejs source
+[debug] [2023-05-23T22:30:15.850Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T22:30:15.850Z] Building nodejs source
+[debug] [2023-05-23T22:30:15.850Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-23T22:30:15.851Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T22:30:15.858Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T22:30:16.070Z] Serving at port 8856
+
+[debug] [2023-05-23T22:30:16.370Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T22:30:16.373Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-23T22:30:21.889Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-23T22:30:22.894Z] Validating nodejs source
+[debug] [2023-05-23T22:30:24.407Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T22:30:24.407Z] Building nodejs source
+[debug] [2023-05-23T22:30:24.407Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-23T22:30:24.410Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T22:30:24.419Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T22:30:24.649Z] Serving at port 8658
+
+[debug] [2023-05-23T22:30:24.930Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T22:30:24.935Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-23T22:30:28.528Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2023-05-23T22:30:28.531Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2023-05-23T22:30:29.540Z] Validating nodejs source
+[debug] [2023-05-23T22:30:30.995Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T22:30:30.995Z] Building nodejs source
+[debug] [2023-05-23T22:30:30.995Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-23T22:30:30.997Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T22:30:31.005Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T22:30:31.191Z] Serving at port 8010
+
+[debug] [2023-05-23T22:30:31.430Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T22:30:31.433Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-23T22:30:41.488Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:30:41.489Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"dea7775d-36e0-460b-9d73-eae8a0d2ba3a","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:30:41.488Z","data":{"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","metadata":{"creationTime":"2023-05-23T22:30:41.487Z","lastSignInTime":"2023-05-23T22:30:41.487Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:30:41.502Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:30:41.503Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:30:45.546Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:30:45.546Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:30:45.546Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:30:45.546Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:30:45.547Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:30:45.559Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:30:45.559Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:30:45.560Z] [worker-pool] Cleaned up workers for us-central1-handleOfflineAnon: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-handleOfflineAnon: 1 --> 0"}}
+[debug] [2023-05-23T22:30:45.567Z] [worker-pool] addWorker(us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-handleOfflineAnon)"}}
+[debug] [2023-05-23T22:30:45.567Z] [worker-pool] Adding worker with key us-central1-handleOfflineAnon, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-handleOfflineAnon, total=1"}}
+[debug] [2023-05-23T22:30:46.619Z] [runtime-status] [3132] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-23T22:30:46.620Z] [runtime-status] [3132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:30:46.620Z] [runtime-status] [3132] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-05-23T22:30:46.621Z] [runtime-status] [3132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:30:46.839Z] [runtime-status] [3132] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-05-23T22:30:46.839Z] [runtime-status] [3132] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-05-23T22:30:46.840Z] [runtime-status] [3132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:30:46.841Z] [runtime-status] [3132] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-23T22:30:46.843Z] [runtime-status] [3132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-23T22:30:46.843Z] [runtime-status] [3132] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\chase\\Desktop\\chat\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-05-23T22:30:46.845Z] [runtime-status] [3132] initializeApp(DEFAULT) {"storageBucket":"chatrr-9e8fa.appspot.com","databaseURL":"http://127.0.0.1:9000/?ns=chatrr-9e8fa-default-rtdb","projectId":"chatrr-9e8fa"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] initializeApp(DEFAULT) {\"storageBucket\":\"chatrr-9e8fa.appspot.com\",\"databaseURL\":\"http://127.0.0.1:9000/?ns=chatrr-9e8fa-default-rtdb\",\"projectId\":\"chatrr-9e8fa\"}"}}
+[debug] [2023-05-23T22:30:46.859Z] [runtime-status] [3132] Functions runtime initialized. {"cwd":"C:\\Users\\chase\\Desktop\\chat\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\chase\\\\Desktop\\\\chat\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-05-23T22:30:46.859Z] [runtime-status] [3132] Listening to port: \\?\pipe\fire_emu_9fcf5d386654256c {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] Listening to port: \\\\?\\pipe\\fire_emu_9fcf5d386654256c"}}
+[debug] [2023-05-23T22:30:46.898Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE"}}
+[debug] [2023-05-23T22:30:46.898Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:30:46.898Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY"}}
+[debug] [2023-05-23T22:30:46.910Z] [runtime-status] [3132] RunBackground {"data":{"data":{"status":"away","timestamp":1684881042460,"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv"},"delta":{"status":"online","timestamp":1684881045529}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","token":{"provider_id":"anonymous","exp":1684884641,"user_id":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","iat":1684881041,"sub":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","aud":"chatrr-9e8fa","auth_time":1684881041,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/ifKIaLBDoqWVXfGtK9ROmR9MQOyv","timestamp":"2023-05-23T22:30:45.529Z","eventId":"SqsdXaBxEqgZ+o85it57vsOrE08="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] RunBackground {\"data\":{\"data\":{\"status\":\"away\",\"timestamp\":1684881042460,\"uid\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\"},\"delta\":{\"status\":\"online\",\"timestamp\":1684881045529}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684884641,\"user_id\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"iat\":1684881041,\"sub\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684881041,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"timestamp\":\"2023-05-23T22:30:45.529Z\",\"eventId\":\"SqsdXaBxEqgZ+o85it57vsOrE08=\"}}"}}
+[debug] [2023-05-23T22:30:46.912Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 13.9241ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 13.9241ms"}}
+[debug] [2023-05-23T22:30:46.913Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE"}}
+[debug] [2023-05-23T22:30:46.913Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:30:46.913Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:30:46.913Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:30:47.703Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:30:47.703Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:30:47.704Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:30:47.703Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:30:47.704Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:30:47.707Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:30:47.707Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:30:47.707Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:30:47.708Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY"}}
+[debug] [2023-05-23T22:30:47.710Z] [runtime-status] [3132] RunBackground {"data":{"data":{"status":"online","timestamp":1684881045529,"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv"},"delta":{"status":"offline","timestamp":1684881047695}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","token":{"provider_id":"anonymous","exp":1684884641,"user_id":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","iat":1684881041,"sub":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","aud":"chatrr-9e8fa","auth_time":1684881041,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/ifKIaLBDoqWVXfGtK9ROmR9MQOyv","timestamp":"2023-05-23T22:30:47.695Z","eventId":"omB5Marb+479VfDefIZBQPQwIUI="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] RunBackground {\"data\":{\"data\":{\"status\":\"online\",\"timestamp\":1684881045529,\"uid\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\"},\"delta\":{\"status\":\"offline\",\"timestamp\":1684881047695}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684884641,\"user_id\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"iat\":1684881041,\"sub\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684881041,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"ifKIaLBDoqWVXfGtK9ROmR9MQOyv\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/ifKIaLBDoqWVXfGtK9ROmR9MQOyv\",\"timestamp\":\"2023-05-23T22:30:47.695Z\",\"eventId\":\"omB5Marb+479VfDefIZBQPQwIUI=\"}}"}}
+[info] >  anonymous {"user":"anonymous","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"\u001b[90m> \u001b[39m anonymous"}}
+[debug] [2023-05-23T22:30:48.134Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:30:48.134Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"29f853e8-e438-4502-b838-ac51d67a01ad","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:30:48.134Z","data":{"uid":"ifKIaLBDoqWVXfGtK9ROmR9MQOyv","metadata":{"creationTime":"2023-05-23T22:30:41.487Z","lastSignInTime":"2023-05-23T22:30:41.487Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:30:48.136Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:30:48.136Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:30:48.137Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 428.8812ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 428.8812ms"}}
+[debug] [2023-05-23T22:30:48.137Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE"}}
+[debug] [2023-05-23T22:30:48.138Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:30:48.138Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:30:48.138Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:31:05.733Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:31:05.733Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"6ed67883-a28b-462f-b8fa-17b85a5429d4","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:31:05.733Z","data":{"uid":"GVJ57SC29QbmN3G1mHJtrl8FfWYK","metadata":{"creationTime":"2023-05-23T22:16:54.889Z","lastSignInTime":"2023-05-23T22:16:54.889Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:31:05.735Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:31:05.735Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:31:08.682Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:31:08.682Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"c08ef018-f9e5-488a-99ec-b56ce5b6f6b5","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:31:08.682Z","data":{"uid":"gqG01K7PUQvF6hQh2qbT5m1XzyKc","metadata":{"creationTime":"2023-05-23T22:29:12.275Z","lastSignInTime":"2023-05-23T22:29:12.275Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:31:08.684Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:31:08.685Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:31:47.044Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:31:47.045Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"97a04795-846e-4396-86f0-e498c9ca04a9","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:31:47.044Z","data":{"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk","metadata":{"creationTime":"2023-05-23T22:31:47.044Z","lastSignInTime":"2023-05-23T22:31:47.044Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:31:47.059Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:31:47.060Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:31:59.691Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:31:59.691Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:31:59.692Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:31:59.691Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:31:59.692Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:31:59.697Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:31:59.697Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:31:59.697Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:31:59.698Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY"}}
+[debug] [2023-05-23T22:31:59.700Z] [runtime-status] [3132] RunBackground {"data":{"data":{"status":"away","timestamp":1684881108971,"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk"},"delta":{"status":"online","timestamp":1684881119680}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"RdAvSudVmvu3wPNUA29XNTngsLsk","token":{"provider_id":"anonymous","exp":1684884707,"user_id":"RdAvSudVmvu3wPNUA29XNTngsLsk","iat":1684881107,"sub":"RdAvSudVmvu3wPNUA29XNTngsLsk","aud":"chatrr-9e8fa","auth_time":1684881107,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/RdAvSudVmvu3wPNUA29XNTngsLsk","timestamp":"2023-05-23T22:31:59.680Z","eventId":"BNZYAOP052QnWjVqWhJ1dGFjHQ0="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] RunBackground {\"data\":{\"data\":{\"status\":\"away\",\"timestamp\":1684881108971,\"uid\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\"},\"delta\":{\"status\":\"online\",\"timestamp\":1684881119680}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684884707,\"user_id\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\",\"iat\":1684881107,\"sub\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684881107,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/RdAvSudVmvu3wPNUA29XNTngsLsk\",\"timestamp\":\"2023-05-23T22:31:59.680Z\",\"eventId\":\"BNZYAOP052QnWjVqWhJ1dGFjHQ0=\"}}"}}
+[debug] [2023-05-23T22:31:59.701Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 3.415ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 3.415ms"}}
+[debug] [2023-05-23T22:31:59.702Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE"}}
+[debug] [2023-05-23T22:31:59.702Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:31:59.702Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:31:59.703Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:32:01.743Z] [work-queue] {"queuedWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:32:01.743Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-23T22:32:01.743Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0-2023-05-23T22:32:01.743Z"],"workRunningCount":1}
+[debug] [2023-05-23T22:32:01.743Z] Accepted request POST /functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 --> us-central1-handleOfflineAnon-0
+[debug] [2023-05-23T22:32:01.749Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-23T22:32:01.749Z] [functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0, mapping to path=/functions/projects/chatrr-9e8fa-default-rtdb/triggers/us-central1-handleOfflineAnon-0"}}
+[debug] [2023-05-23T22:32:01.749Z] [worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-handleOfflineAnon)"}}
+[info] i  functions: Beginning execution of "us-central1-handleOfflineAnon" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Beginning execution of \"us-central1-handleOfflineAnon\""}}
+[debug] [2023-05-23T22:32:01.750Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: BUSY"}}
+[debug] [2023-05-23T22:32:01.752Z] [runtime-status] [3132] RunBackground {"data":{"data":{"status":"online","timestamp":1684881119680,"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk"},"delta":{"status":"offline","timestamp":1684881121737}},"context":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","params":{"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk"},"auth":{"admin":false,"variable":{"provider":"anonymous","provider_id":"anonymous","user_id":"RdAvSudVmvu3wPNUA29XNTngsLsk","token":{"provider_id":"anonymous","exp":1684884707,"user_id":"RdAvSudVmvu3wPNUA29XNTngsLsk","iat":1684881107,"sub":"RdAvSudVmvu3wPNUA29XNTngsLsk","aud":"chatrr-9e8fa","auth_time":1684881107,"iss":"https://securetoken.google.com/chatrr-9e8fa","firebase":{"identities":{},"sign_in_provider":"anonymous"}},"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk"}},"domain":"localhost","resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/RdAvSudVmvu3wPNUA29XNTngsLsk","timestamp":"2023-05-23T22:32:01.737Z","eventId":"myEOCf4SbI5uUopsJLjeequfL08="}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[runtime-status] [3132] RunBackground {\"data\":{\"data\":{\"status\":\"online\",\"timestamp\":1684881119680,\"uid\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\"},\"delta\":{\"status\":\"offline\",\"timestamp\":1684881121737}},\"context\":{\"eventType\":\"providers/google.firebase.database/eventTypes/ref.update\",\"params\":{\"uid\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\"},\"auth\":{\"admin\":false,\"variable\":{\"provider\":\"anonymous\",\"provider_id\":\"anonymous\",\"user_id\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\",\"token\":{\"provider_id\":\"anonymous\",\"exp\":1684884707,\"user_id\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\",\"iat\":1684881107,\"sub\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\",\"aud\":\"chatrr-9e8fa\",\"auth_time\":1684881107,\"iss\":\"https://securetoken.google.com/chatrr-9e8fa\",\"firebase\":{\"identities\":{},\"sign_in_provider\":\"anonymous\"}},\"uid\":\"RdAvSudVmvu3wPNUA29XNTngsLsk\"}},\"domain\":\"localhost\",\"resource\":\"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/RdAvSudVmvu3wPNUA29XNTngsLsk\",\"timestamp\":\"2023-05-23T22:32:01.737Z\",\"eventId\":\"myEOCf4SbI5uUopsJLjeequfL08=\"}}"}}
+[info] >  anonymous {"user":"anonymous","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"\u001b[90m> \u001b[39m anonymous"}}
+[debug] [2023-05-23T22:32:01.790Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast [none]
+[debug] [2023-05-23T22:32:01.791Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"eventId":"6cb9bae7-6973-4696-8029-a5fd3431d2a1","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/chatrr-9e8fa","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2023-05-23T22:32:01.790Z","data":{"uid":"RdAvSudVmvu3wPNUA29XNTngsLsk","metadata":{"creationTime":"2023-05-23T22:31:47.044Z","lastSignInTime":"2023-05-23T22:31:47.044Z"},"customClaims":{}}}
+[debug] [2023-05-23T22:32:01.792Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast 200
+[debug] [2023-05-23T22:32:01.792Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/chatrr-9e8fa/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2023-05-23T22:32:01.793Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-handleOfflineAnon" in 42.7906ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finished \"us-central1-handleOfflineAnon\" in 42.7906ms"}}
+[debug] [2023-05-23T22:32:01.793Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: IDLE"}}
+[debug] [2023-05-23T22:32:01.793Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-23T22:32:01.793Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-23T22:32:01.793Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-24T00:03:33.326Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-24T00:03:33.736Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2023-05-24T00:03:33.746Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2023-05-24T00:03:34.749Z] Validating nodejs source
+[debug] [2023-05-24T00:03:36.747Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-24T00:03:36.747Z] Building nodejs source
+[debug] [2023-05-24T00:03:36.747Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-24T00:03:36.748Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-24T00:03:36.758Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-24T00:03:37.056Z] Serving at port 8709
+
+[debug] [2023-05-24T00:03:37.539Z] Got response from /__/functions.yaml Failed to generate manifest from function source: ReferenceError: Cannot access 'firestore' before initialization
+[debug] [2023-05-24T00:03:37.542Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:
+     ...  function source: ReferenceError: Cannot access 'firestore' befo ... 
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: ReferenceError: Cannot access 'firestore' before initialization\n\u0000","position":64,"line":0,"column":64},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:\n     ...  function source: ReferenceError: Cannot access 'firestore' befo ... \n                                         ^"}
+[debug] [2023-05-24T00:03:37.546Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: Cannot access 'firestore' before initialization {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: Cannot access 'firestore' before initialization"}}
+[debug] [2023-05-24T00:03:43.967Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-24T00:03:44.363Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2023-05-24T00:03:44.363Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2023-05-24T00:03:45.372Z] Validating nodejs source
+[debug] [2023-05-24T00:03:46.847Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-24T00:03:46.847Z] Building nodejs source
+[debug] [2023-05-24T00:03:46.847Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-24T00:03:46.848Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-24T00:03:46.856Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-24T00:03:47.086Z] Serving at port 8843
+
+[debug] [2023-05-24T00:03:47.383Z] Got response from /__/functions.yaml Failed to generate manifest from function source: ReferenceError: onSchedule is not defined
+[debug] [2023-05-24T00:03:47.383Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:
+     ...  function source: ReferenceError: onSchedule is not defined
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: ReferenceError: onSchedule is not defined\n\u0000","position":64,"line":0,"column":64},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:\n     ...  function source: ReferenceError: onSchedule is not defined\n                                         ^"}
+[debug] [2023-05-24T00:03:47.388Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: onSchedule is not defined {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: onSchedule is not defined"}}
+[debug] [2023-05-24T00:09:18.437Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-24T00:09:18.905Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2023-05-24T00:09:18.908Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2023-05-24T00:09:19.922Z] Validating nodejs source
+[debug] [2023-05-24T00:09:21.430Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-24T00:09:21.431Z] Building nodejs source
+[debug] [2023-05-24T00:09:21.431Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-24T00:09:21.432Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-24T00:09:21.442Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-24T00:09:21.647Z] Serving at port 8115
+
+[debug] [2023-05-24T00:09:21.909Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-24T00:09:21.913Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon."}}
+[debug] [2023-05-24T00:09:21.928Z] [worker-pool] Shutting down IDLE worker (us-central1-handleOfflineAnon) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-handleOfflineAnon)"}}
+[debug] [2023-05-24T00:09:21.928Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: FINISHING"}}
+[debug] [2023-05-24T00:09:21.934Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: exited"}}
+[debug] [2023-05-24T00:09:21.935Z] [worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-handleOfflineAnon"},"extension":{},"message":"[worker-us-central1-handleOfflineAnon-8e03b8b2-d15b-424d-b8ab-8086d2b90021]: FINISHED"}}
+[debug] [2023-05-24T00:20:46.668Z] File C:\Users\chase\Desktop\chat\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2023-05-24T00:20:47.042Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2023-05-24T00:20:47.042Z] File C:\Users\chase\Desktop\chat\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\chase\\Desktop\\chat\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2023-05-24T00:20:48.050Z] Validating nodejs source
+[debug] [2023-05-24T00:20:49.812Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-24T00:20:49.812Z] Building nodejs source
+[debug] [2023-05-24T00:20:49.812Z] Failed to find version of module node: reached end of search path C:\Users\chase\Desktop\chat\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-24T00:20:49.813Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-24T00:20:49.820Z] Found firebase-functions binary at 'C:\Users\chase\Desktop\chat\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-24T00:20:50.067Z] Serving at port 8637
+
+[debug] [2023-05-24T00:20:50.417Z] Got response from /__/functions.yaml {"endpoints":{"connectDisconnect":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userChatStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"connectDisconnect"},"handleOfflineAnon":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.update","eventFilters":{"resource":"projects/_/instances/chatrr-9e8fa-default-rtdb/refs/userPresenceStatus/{uid}"},"retry":false},"labels":{},"entryPoint":"handleOfflineAnon"},"handleChat":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.firebase.database.ref.v1.updated","eventFilters":{},"eventFilterPathPatterns":{"ref":"userChatStatus/{uid}","instance":"*"},"retry":false},"entryPoint":"handleChat"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-24T00:20:50.420Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: connectDisconnect, handleOfflineAnon, handleChat. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: connectDisconnect, handleOfflineAnon, handleChat."}}
+[debug] [2023-05-24T00:20:50.437Z] addRealtimeDatabaseTrigger[*] "{\"name\":\"projects/chatrr-9e8fa/locations/us-central1/triggers/us-central1-handleChat-0\",\"path\":\"userChatStatus/{uid}\",\"event\":\"google.firebase.database.ref.v1.updated\",\"topic\":\"projects/chatrr-9e8fa/topics/us-central1-handleChat-0\",\"namespacePattern\":\"*\"}"
+[debug] [2023-05-24T00:20:50.438Z] >>> [apiv2][query] POST http://127.0.0.1:9000/.settings/functionTriggers.json [none]
+[debug] [2023-05-24T00:20:50.438Z] >>> [apiv2][body] POST http://127.0.0.1:9000/.settings/functionTriggers.json "{\"name\":\"projects/chatrr-9e8fa/locations/us-central1/triggers/us-central1-handleChat-0\",\"path\":\"userChatStatus/{uid}\",\"event\":\"google.firebase.database.ref.v1.updated\",\"topic\":\"projects/chatrr-9e8fa/topics/us-central1-handleChat-0\",\"namespacePattern\":\"*\"}"
+[debug] [2023-05-24T00:20:50.483Z] <<< [apiv2][status] POST http://127.0.0.1:9000/.settings/functionTriggers.json 200
+[debug] [2023-05-24T00:20:50.483Z] <<< [apiv2][body] POST http://127.0.0.1:9000/.settings/functionTriggers.json {"status":"ok"}
+[info] +  functions[us-central1-handleChat]: database function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mdatabase\u001b[22m function initialized."}}
+[debug] [2023-05-24T12:29:23.942Z] Received signal SIGHUP 1

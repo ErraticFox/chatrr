@@ -5,7 +5,7 @@ import { generateRandomUsername } from "$lib/utils";
 
 export async function getUserProfile(uid: string): Promise<UserProfile> {
 	initializeFirebase();
-	const queryRef = admin.firestore().collection('profiles').where("uid", "==", uid);
+	const queryRef = firestore.collection('profiles').where("uid", "==", uid);
 	const query = await queryRef.get()
 
 	if (!query.empty) {
@@ -15,7 +15,7 @@ export async function getUserProfile(uid: string): Promise<UserProfile> {
 		return profile;
 	}
 
-	const newProfileDoc = admin.firestore().collection('profiles').doc()
+	const newProfileDoc = firestore.collection('profiles').doc()
 
 	const profileObj: UserProfile = {
 		_id: newProfileDoc.id,

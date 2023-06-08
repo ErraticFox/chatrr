@@ -1,15 +1,25 @@
 import type { FirebaseApp, FirebaseOptions } from "firebase/app";
-import type { Firestore } from "firebase/firestore";
+import { connectFirestoreEmulator, type Firestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import { getDatabase, type Database } from "firebase/database";
+import { getDatabase, type Database, connectDatabaseEmulator } from "firebase/database";
 import { collection, getFirestore, query, where, addDoc, doc, onSnapshot, setDoc, deleteDoc } from "firebase/firestore";
-import { getAuth, signInWithRedirect, signOut as _signOut, GoogleAuthProvider, onIdTokenChanged, signInAnonymously } from "firebase/auth";
+import {
+    getAuth,
+    signInWithRedirect,
+    signOut as _signOut,
+    GoogleAuthProvider,
+    onIdTokenChanged,
+    signInAnonymously,
+    connectAuthEmulator,
+    type Auth,
+} from "firebase/auth";
 import type { Document } from "$lib/models/Document";
 import { readable } from "svelte/store";
-import { browser } from "$app/environment";
+import { browser, dev } from "$app/environment";
 import type { AnyObject } from "$lib/models/types";
 import { invalidateAll } from "$app/navigation";
 import { loading, peerProfileStore, roomStore, userChatStatusStore, userPresenceStatusStore, userProfileStore } from "./stores";
+import { getFunctions, connectFunctionsEmulator, type Functions } from "firebase/functions";
 
 async function setToken(token: string) {
     const options = {
@@ -42,17 +52,28 @@ function listenForAuthChanges() {
 }
 
 export let app: FirebaseApp;
+export let auth: Auth;
 export let fs: Firestore;
 export let db: Database;
+export let fn: Functions;
 export function initializeFirebase(options: FirebaseOptions) {
     if (!browser) {
         throw new Error("Can't use the Firebase client on the server.");
     }
     if (!app) {
         app = initializeApp(options);
+        auth = getAuth(app);
         fs = getFirestore(app);
         db = getDatabase(app);
+        fn = getFunctions(app)
         listenForAuthChanges();
+
+        if (dev) {
+            connectAuthEmulator(auth, "http://localhost:9099");
+            connectFunctionsEmulator(fn, "localhost", 5001);
+            connectDatabaseEmulator(db, "localhost", 9000)
+            connectFirestoreEmulator(fs, "localhost", 8080);
+        }
     }
 }
 
@@ -123,10 +144,10 @@ function providerFor(name: string) {
 
 export async function signInWith(name: string) {
     const auth = getAuth(app);
-    if (name === 'anonymous') {
+    if (name === "anonymous") {
         await signInAnonymously(auth);
-        loading.set(true)
-        return
+        loading.set(true);
+        return;
     } else {
         const provider = providerFor(name);
         await signInWithRedirect(auth, provider);
